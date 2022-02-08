@@ -1,0 +1,95 @@
+@import "home_v1.2.min.css";
+
+.contact-form-container{
+  margin: 30px 100px;
+  border: 5px black solid;
+  background-image: url("images/background.jpg");
+  .notes{
+    padding: 20px 30px;
+    margin: 30px 50px;
+    font-size: 40px;
+    border-left: 5px black solid;
+  }
+.contact-form{
+  padding: 10px 50px 30px 50px;
+  display: block;
+  text-transform: uppercase;
+  h4{
+    padding: 10px 0px 10px 0px;
+    font-family: 'Acme', sans-serif;
+  }
+  select,input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Add some styling */
+    font-family: 'Source Code Pro', monospace;
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: 50px;
+    margin: 5px 0px;
+    padding: 0px 24px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #333;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #0ebeff;
+    -ms-word-break: normal;
+    word-break: normal;
+    border-radius: 10px;
+  }
+  textarea{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Add some styling */
+    display: block;
+    width: 100%;
+    width: 100%;
+    margin: 5px 0px;
+    padding: 5px 24px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #333;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #0ebeff;
+    -ms-word-break: normal;
+    word-break: normal;
+    border-radius: 10px;
+  }
+  button{
+    font-family: 'Acme', sans-serif;
+    margin: 5px 0px;
+    padding: 0px 24px;
+    font-size: 20px;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #0ebeff;
+    -ms-word-break: normal;
+    word-break: normal;
+    border-radius: 10px;
+    &:hover{
+      color: white;
+      background-color: #0ebeff;
+      cursor: pointer;
+    }
+  }
+}}
+
+@media screen and (max-width: 740px){
+  .contact-form-container{
+    margin: 0;
+    padding: 0;
+    .notes{
+      font-size: 20px;
+    }
+    .contact-form{
+      h4, input{
+        font-size: 14px;
+      }
+    }
+  }
+}

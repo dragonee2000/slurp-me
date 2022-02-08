@@ -1,0 +1,39 @@
+@import "home_v1.2.min.css";
+
+body h1{
+  font-family: 'Audiowide', cursive;
+  font-size: 2.5em;
+  padding: 20px 0px 20px 50px;
+  text-align: center;
+}
+
+#noodlery-logo {
+  height: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.carousel{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Shadows Into Light', cursive;
+  width: 40em;
+  margin-bottom: 20px;
+}
+
+.carousel-item img{
+  border-style: double;
+  border-width: thick;
+}
+
+@media screen and (max-width: 740px){
+  .carousel{
+    width: 100%;
+  }
+  #footer .connect h3{
+    font-size: 15px;
+  }
+}

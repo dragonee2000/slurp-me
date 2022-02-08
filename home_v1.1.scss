@@ -1,0 +1,500 @@
+@mixin popUp-container{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  background: rgba(255,255,255,0.5);
+}
+
+@mixin popUp{
+  position: relative;
+  width: auto;
+  height: auto;
+
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1{
+  font-family: 'Audiowide', cursive;
+  font-size: 2.5em;
+  padding: 20px 0px 20px 50px;
+  text-align: center;
+}
+.logo-container{
+  align-items: center;
+  background: #000000;
+  #front-logo{
+    border: 0px;
+    height: 30vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+  }
+}
+#popUp-container{
+    @include popUp-container;
+    #popUp{
+      @include popUp;
+      margin: 4% 35%;
+      i{
+        font-size: 25px;
+        color: black;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+        &:hover{
+          color: white;
+        }
+      }
+      img{
+        height: 85vh;
+        box-shadow: 1px 2px 5px 3px black;
+      }
+    }
+}
+
+#popUp-container2{
+  @include popUp-container;
+  #popUp2{
+    @include popUp;
+    img{
+      height: 85vh;
+      margin: 4% 20%;
+    }
+  }
+}
+
+.nav-bar{
+  background-color: #000000;
+  .main-navigation{
+    background-image: linear-gradient(to bottom, #000205, grey);
+    height: 40px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    a{
+      font-size: 14px;
+      color: white;
+      padding: 0px 25px 0px 25px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: 'Audiowide', cursive;
+      &:hover{
+        color: #95a5a6;
+        font-size: 18px;
+        transition-duration: 0.25s;
+        text-decoration: none;
+      }
+    }
+    .hide-nav-btn{
+      display: none;
+    }
+  }
+  #navbar-chk {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+  }
+}
+#about-container{
+  background: #636e72;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  .about-info{
+    background: #b2bec3;
+    height: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 98.5%, 0 83.5%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 98.5%, 0 83.5%);
+    h1{
+      color: #dfe6e9;
+    }
+    .description{
+      display: inline-flex;
+      flex-direction: row;
+      p{
+       font-size: 20px;
+       font-family: 'Source Code Pro', monospace;
+       margin: 40px 20px 20px 100px;
+       padding: 40px 30px;
+       border-bottom: solid;
+     }
+     .aus-beef{
+        color: #dfe6e9;
+        font-family: 'Lacquer', sans-serif;
+        font-size: 40px;
+        text-align: center;
+      }
+      #noodles{
+        width: 25%;
+        height: 25%;
+        margin: 40px 100px 70px 20px;
+        background-color: black;
+        padding: 20px;
+        border: 10px white double;
+      }
+    }
+  }
+  #noodle-logo{
+    height: 80px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+  }
+}
+#loc-container{
+  background: #ecf0f1;
+  height: 32em;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  text-align: center;
+  .location{
+    font-family: 'Source Code Pro', monospace;
+    display: inline-flex;
+    text-align: justify;
+    .location-container{
+      font-size: 18px;
+      padding: 10px 20px 20px 50px;
+      display: inline-flex;
+      flex-direction: row;
+      div{
+        margin: 0 20px;
+        h2{
+          padding: 0px 0px 10px 0px;
+          font-family: 'Shadows Into Light', cursive;
+          font-size: 28px;
+        }
+           #dir-sunway , #dir-puchong {
+             margin: 10px 0px 0px 0px;
+            a{
+            text-decoration: none;
+            color: gray;
+            font-family: 'Kulim Park', sans-serif;
+            text-transform: uppercase;
+            font-size: 14px;
+            padding: 10px 0px 0px 10px;
+            border-style: hidden hidden hidden solid;
+            cursor: pointer;
+            &:hover{
+              color: #2d3436;
+            }
+          }
+        }
+      }
+    }
+  }
+  img{
+    height: 70px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px;
+  }
+}
+#menu-container{
+  color: white;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  h1{
+    border-bottom: double 8px;
+    border-color: #e17055;
+    width: 82%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #noodle-logo{
+    height: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  .menu-info{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    color: black;
+    font-family: 'Kulim Park', sans-serif;
+    #images{
+      h4{
+        margin: 10px 0px 0px 60px;
+        font-size: 11px;
+        font-family: 'Audiowide', cursive;
+      }
+      img{
+        height: 40em;
+        margin: 20px 0px 0px 60px;
+        box-shadow: 0 8px 10px 0 #e17055, 0 10px 20px 0 #9b59b6;
+        &:hover{
+          height: 42em;
+        }
+      }
+    }
+    .menu {
+      margin: 6px 0px 0px 30px;
+      h2{
+        font-family: 'Shadows Into Light', cursive;
+      }
+      h3{
+        font-family: 'Kulim Park', sans-serif;
+        font-size: 16px;
+        padding-bottom: 7.5px;
+      }
+      h4{
+        font-family: 'Source Code Pro', monospace;
+        font-size: 12px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+#footer{
+  font-family: 'Audiowide', cursive;
+  text-shadow: 2px 2px #dfe6e9;
+  height: 15em;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-style: solid hidden hidden hidden;
+  .info{
+    display: flex;
+    flex-direction: column;
+    padding-right: 70px;
+    a{
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+      padding-top: 10px;
+      margin-left: 10px;
+      &:hover{
+        color: #b2bec3;
+        text-decoration: none;
+      }
+    }
+  }
+  .connect{
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+    margin: 10px;
+    border-left:solid;
+    h3{
+      padding: 10px;
+    }
+    a{
+      text-decoration: none;
+      font-size: 2em;
+      padding: 10px;
+      color: #be2edd;
+      &:hover{
+        color: #b2bec3;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 740px){
+  h1{
+    font-size: 30px;
+  }
+  #popUp-container{
+    #popUp{
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      width: auto;
+      height: auto;
+      margin-left: 10%;
+      margin-right: 10%;;
+      i{
+        font-size: 4vh;
+      }
+      img{
+        height:80vh;
+      }
+    }
+  }
+  #popUp-container2{
+    #popUp2{
+      img{
+        height: 75vh;
+        margin-left: 10%;
+      }
+    }
+  }
+  .logo-container{
+    #front-logo{
+      width:100%;
+      height: 100%;
+    }
+  }
+  .nav-bar{
+    .show-nav-btn {
+      font-size: 20px;
+      display: inline-block;
+      color: white;
+      cursor: pointer;
+      float: right;
+      &:hover{
+        color: #95a5a6;
+        transition-duration: 0.25s;
+      }
+    }
+    .show-nav-btn{
+      margin-right: 30px;
+    }
+    #navbar-chk{
+      &:not(checked) ~ .main-navigation{
+        visibility: hidden;
+      }
+      &:checked ~ .show-nav-btn{
+        visibility: hidden;
+      }
+      &:checked ~ .main-navigation{
+        visibility: visible;
+        height: 65vh;
+        padding-top: 5px;
+      }
+      &:checked ~ .hide-nav-btn{
+        visibility: visible;
+      }
+    }
+    .main-navigation{
+      display: inline-grid;
+      height: 5px;
+      .hide-nav-btn {
+        font-size: 20px;
+      display: inline-block;
+      color: white;
+      cursor: pointer;
+      float: right;
+      &:hover{
+        color: #95a5a6;
+        transition-duration: 0.25s;
+      }
+    }
+    }
+  }
+  #about-container{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    .about-info{
+      position: relative;
+      display: inline-flex;
+      flex-direction: column;
+      clip-path: polygon(0 0, 100% 0, 100% 99%, 0 95%);
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 99%, 0 95%);
+      h1{
+        z-index: 1;
+      }
+      .description{
+        margin-bottom: 30px;
+        justify-content: center;
+        align-items: center;
+        #noodles{
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          border: 0;
+        }
+        #about{
+          background-color: rgba(255,255,255,0.5);
+          border: 2px solid black;
+          padding: 20px;
+          z-index: 5;
+          width: 80%;
+          height: 100%;
+        p{
+          font-size: 15px;
+          margin-top: 0px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+          .aus-beef{
+            font-size: 25px;
+            color: black;
+          }
+      }
+
+      }
+    }
+  }
+
+  #loc-container{
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    height: 160vh;
+    .location{
+      .location-container{
+        font-size: 14px;
+        flex-direction: column;
+        div{
+          font-size: 15px;
+          #dir-sunway, #dir-puchong{
+            a {
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #images{
+    img{
+      height: 15em;
+      &:hover{
+        height: 17.5em;
+      }
+    }
+  }
+  #menu-container{
+    .menu-info{
+      display: inline-grid;
+      justify-content: center;
+      #images{
+        img{
+          height: 15em;
+          width: auto;
+          &:hover{
+            margin-left: 0;
+            width: 100vw;
+            height: auto;
+          }
+        }
+      }
+      .menu{
+        font-size: 9px;
+        div{
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+  #footer{
+    font-size: 10px;
+    height: 27.5%;
+    .info{
+      padding: 30px;
+    }
+  }
+}

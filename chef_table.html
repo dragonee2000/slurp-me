@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0" >
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer|Tomorrow|Ibarra+Real+Nova|Audiowide|Montserrat&ampdisplay=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="chef_table_v2.2.min.css">
+    <title>Services</title>
+  </head>
+  <body style="background-color: black;">
+    <div id = "enquiry-form" style="display: none;">
+        <h1>Get in touch</h1>
+        <form class="contact-form" action="chef_table_enquiry_v1.php" method="POST">
+          <div class="form-field col x-50">
+           <input name ="name" id="name" class="input js-input" type="text" required>
+           <label class="label" for="name">Name</label>
+        </div>
+        <div class="form-field col x-50">
+           <input name="email" id="email" class="input js-input" type="email" required>
+           <label class="label" for="email">E-mail</label>
+        </div>
+        <div class="form-field col x-100">
+           <input name="message" id="message" class="input js-input" type="text" required>
+           <label class="label" for="message">Message</label>
+        </div>
+        <div class="form-field col x-100 align-center">
+        <button type="submit" name="button" class="submit-btn">Submit</button>
+        </form>
+    </div>
+  </div>
+  <div id = "success-container" style="display: none;">
+    <div class="success-popUp">
+      <i class="fas fa-times"></i>
+      <div class="message">
+        <i class="fas fa-check-circle"></i>
+        <h1>Thank you</h1>
+        <h3>Your enquiry has been sent!</h3>
+      </div>
+  </div>
+</div>
+    <div id="slurp_me_home">
+      <a href="home">Back to Slurp Me</a>
+    </div>
+    <div id="enquiry-container">
+      <div>
+        <h1>Catering & Chef Table</h1>
+        <h2 class= "enquiry-btn">Enquiry</h2>
+        <div class="bg"></div>
+      </div>
+    </div>
+    <div class="gallery">
+      <h1>Gallery</h1>
+      <div class="gallery-wrap">
+          <div class="item item-1"><div class="name"><h2>Pan-Seared Prawns with Thai Furikake and Lime Gel</h2></div></div>
+        <div class="item item-2"><div class="name"><h2>Deconstructed Tuna Sushi</h2></div></div>
+        <div class="item item-3"><div class="name"><h2>Thai Mixed Mushroom Salad</h2></div></div>
+        <div class="item item-4"><div class="name"><h2>Tea-smoked chicken breast, aioli, salted lemon, chicken fat glazed vegetables</h2></div></div>
+        <div class="item item-5"><div class="name"><h2>Coconut Ice Cream with yam, sweet potato and nata de coco</h2></div></div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+    $('.enquiry-btn').click(function(){
+      $('#enquiry-form').css('display','inline-block');
+    });/*
+    $('.contact-form').on('submit', function(e){
+          e.preventDefault();
+
+          $.ajax({
+            type: 'post',
+            url: 'chef_table_enquiry.php',
+            data: $('form').serialize(),
+            success: function () {
+              alert('form was submitted');
+            }
+          });
+    });*/
+    $('.submit-btn').click(function(){
+      $('#enquiry-form').css('display','none');
+    });
+    $('.submit-btn').click(function(){
+      $('#success-container').css('display', 'block');
+    });
+    $('.success-popUp i').click(function(){
+      $('#success-container').css('display', 'none');
+    });
+      $( '.js-input' ).keyup(function() {
+  if( $(this).val() ) {
+     $(this).addClass('not-empty');
+  } else {
+     $(this).removeClass('not-empty');
+  }
+});
+    </script>
+  </body>
+</html>
